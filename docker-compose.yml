@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=quasar
+
+  app:
+    build: ./src
+    image: audeldiaz/quasar:0.1
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/usr/src/app
+    depends_on:
+      - db
+    env_file: .env
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db

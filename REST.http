@@ -1,0 +1,8 @@
+POST http://localhost:8000/user
+content-type: application/json
+
+{
+    "first_name": "Hello",
+    "last_name": "World",
+    "age": 12
+}
