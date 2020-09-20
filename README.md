@@ -3,7 +3,7 @@
 This repo is a basic example of using FastAPI + Alembic with PostgreSQL. This example use Docker and docker-compose like an easy way to run and develop.
 
 ## Getting started:
-Please add .env file to projec root. 
+Add .env file to projec root. 
 ```
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
@@ -23,7 +23,6 @@ PGADMIN_DEFAULT_PASSWORD=admin
 
 ## Services:
     - App: http://localhost:8000
-    - Pgadmin4: http://localhost:5050
 
 ## Documentation
     - swagger - http://localhost:8000/docs
