@@ -22,3 +22,4 @@ def create_user(user: SchemaUser):
     db.session.add(db_user)
     db.session.commit()
     return db_user
+
